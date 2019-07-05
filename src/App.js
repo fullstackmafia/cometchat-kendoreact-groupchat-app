@@ -1,32 +1,25 @@
-import React from 'react';
+import React, { Component } from "react";
+import { Route, Redirect, Switch } from "react-router-dom";
+import '@progress/kendo-theme-material/dist/all.css';
+import "./App.css";
+import Login from "./components/Login";
+import Groupchat from "./components/Groupchat";
+import chat from "./lib/chat";
 
-class App extends React.Component {
-  constructor(){
-    super();
-
-    this.state = {
-      info: [],
-    }
-  };
-
-  componentDidMount() {
-    const API = "5327f1d2dd284b90914d421702c5ca9c";
-    fetch(`http://api1.5sim.net/stubs/handler_api.php?api_key=${API}&action=getBalance`)
-    .then(response => {
-      console.log(response);
-      return response.json;
-    }).then(data => {
-      console.log(data)
-    }) 
-
+class App extends Component {
+  constructor(props) {
+    super(props);
+    chat.initChat();
   }
 
   render() {
     return (
-      <div>
-        <h4>Good</h4>
-      </div>
-    )
+      <Switch>
+        <Redirect exact from="/" to="/login" />
+        <Route path="/login" component={Login} />
+        <Route path="/chat" component={Groupchat} />
+      </Switch>
+    );
   }
 }
 

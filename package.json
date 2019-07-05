@@ -3,8 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@cometchat-pro/chat": "^1.7.0",
+    "@progress/kendo-react-buttons": "^3.2.2",
+    "@progress/kendo-react-conversational-ui": "^3.2.2",
+    "@progress/kendo-react-dateinputs": "^3.2.2",
+    "@progress/kendo-react-inputs": "^3.2.2",
+    "@progress/kendo-react-intl": "^3.2.2",
+    "@progress/kendo-theme-material": "^2.5.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1"
   },
   "scripts": {
@@ -27,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "1.18.2"
   }
 }
