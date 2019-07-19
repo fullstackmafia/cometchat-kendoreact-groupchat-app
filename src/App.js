@@ -4,7 +4,7 @@ import '@progress/kendo-theme-material/dist/all.css';
 import "./App.css";
 import Login from "./components/Login";
 import Groupchat from "./components/Groupchat";
-import chat from "./lib/chat";
+import chat from "./data/chat";
 
 class App extends Component {
   constructor(props) {

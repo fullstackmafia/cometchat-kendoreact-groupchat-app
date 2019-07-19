@@ -1,9 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-import ArmyChat from "../lib/chat";
+import ArmyChat from "../data/chat";
 import config from "../config";
-// import {Chat} from '@progress/kendo-react-conversational-ui';
-import { Input } from '@progress/kendo-react-inputs';
 
 class Groupchat extends React.Component {
   constructor(props) {
@@ -13,8 +11,8 @@ class Groupchat extends React.Component {
       receiverID: "",
       messageText: null,
       groupMessage: [],
-      user: {},
-      authorize: true
+      authorize: true,
+      user: {}
     };
     this.GUID = config.GUID;
   }
@@ -115,8 +113,9 @@ class Groupchat extends React.Component {
             </div>
           ))}
         </ul>
+      
         <div className="chatInputWrapper">
-          <form onSubmit={this.handleSubmit}>
+           <form onSubmit={this.handleSubmit}>
             <input
               className="textarea input"
               type="text"
@@ -124,10 +123,11 @@ class Groupchat extends React.Component {
               onChange={this.handleChange}
             />
           </form>
-        </div>
+        </div>  
       </div>
+      
     );
   }
 }
 
-export default Groupchat;
+ export default Groupchat;

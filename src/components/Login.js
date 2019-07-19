@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-import chat from "../lib/chat";
+import chat from "../data/chat";
 import spinner from "../logo.svg";
 import { Button } from '@progress/kendo-react-buttons';
 import { Input } from '@progress/kendo-react-inputs';
@@ -24,6 +24,12 @@ class Login extends React.Component {
     }
   };
 
+  toggleIsSubmitting = () => {
+    this.setState(prevState => ({
+      submit: !prevState.submit
+    }));
+  };
+
   login = () => {
     this.toggleIsSubmitting();
     chat
@@ -41,12 +47,6 @@ class Login extends React.Component {
           this.toggleIsSubmitting();
           console.log(error);
       });
-  };
-
-  toggleIsSubmitting = () => {
-    this.setState(prevState => ({
-      submit: !prevState.submit
-    }));
   };
 
   handleInputChange = e => {
@@ -97,5 +97,4 @@ class Login extends React.Component {
     );
   }
 }
-
 export default Login;

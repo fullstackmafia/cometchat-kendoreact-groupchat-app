@@ -1,6 +1,6 @@
 export default {
-    APPID: "4701aec1cdd5cf",
-    APIKEY : "3beff5230da2282382161eadd612b45a3fabd246",
+    APPID: "50826ad93cce5c",
+    APIKEY : "9a989d33530632e11e717ec604705de0d6053b83",
     GUID : "specialforces"
 }
 
